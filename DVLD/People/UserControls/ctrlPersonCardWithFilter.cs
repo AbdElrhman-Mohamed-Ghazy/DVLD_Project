@@ -82,7 +82,10 @@ namespace DVLD.People.UserControls
             FindNow();
 
         }
-
+        public void DesableEditPersonInfo()
+        {
+            ctrlPersonInformation1.DesableEditPersonInfo();
+        }
         private void FindNow()
         {
             switch (cbFilterBy.Text)
@@ -179,24 +182,6 @@ namespace DVLD.People.UserControls
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
-        //private void txtFilterValue_KeyPress(object sender, KeyPressEventArgs e)
-        //{
-        //    if (e.KeyChar == (char)13)
-        //    {
-
-        //        btnFind.PerformClick();
-        //    }
-
-        //    //this will allow only digits if person id is selected
-        //    if (cbFilterBy.Text == "Person ID")
-        //        e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-        //}
-
-        private void txtFilterValue_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtFilterValue_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)13)
@@ -210,6 +195,8 @@ namespace DVLD.People.UserControls
                 e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
 
         }
+
+    
     }
 
 }

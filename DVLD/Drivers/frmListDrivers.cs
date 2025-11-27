@@ -1,4 +1,5 @@
-﻿using DVLD_Business;
+﻿using DVLD.Licenses;
+using DVLD_Business;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -127,6 +128,12 @@ namespace DVLD.Drivers
             frmPerson_Info frmPerson_ = new frmPerson_Info((int)dgvDrivers.CurrentRow.Cells[1].Value);
             frmPerson_.ShowDialog();
             frmListDrivers_Load(null,null);
+        }
+
+        private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmShowPersonLicenseHistory frm =new frmShowPersonLicenseHistory((int)dgvDrivers.CurrentRow.Cells[1].Value);
+            frm.ShowDialog();   
         }
     }
 }

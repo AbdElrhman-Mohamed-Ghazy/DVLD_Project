@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -86,7 +87,7 @@ namespace DVLD.Licenses.Local_Licenses.Controls
 
         private void btnFind_Click(object sender, EventArgs e)
         {
-            if (!this.ValidateChildren())
+            if (!this.ValidateChildren() || txtLicenseID.Text == "")
             {
                 //Here we dont continue becuase the form is not valid
                 MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -94,6 +95,7 @@ namespace DVLD.Licenses.Local_Licenses.Controls
                 return;
 
             }
+
             _LicenseID = int.Parse(txtLicenseID.Text);
             LoadLicenseInfo(_LicenseID);
         }
@@ -109,7 +111,7 @@ namespace DVLD.Licenses.Local_Licenses.Controls
         {
             if (string.IsNullOrEmpty(txtLicenseID.Text.Trim()))
             {
-                e.Cancel = true;
+               //e.Cancel = true;
                 errorProvider1.SetError(txtLicenseID, "This field is required!");
             }
             else
@@ -117,6 +119,11 @@ namespace DVLD.Licenses.Local_Licenses.Controls
                 //e.Cancel = false;
                 errorProvider1.SetError(txtLicenseID, null);
             }
+        }
+
+        public string TxtLicenceValue()
+        {
+            return txtLicenseID.Text;
         }
     }
 }

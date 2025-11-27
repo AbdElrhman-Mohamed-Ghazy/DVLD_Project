@@ -130,6 +130,10 @@ namespace DVLD.People.UserControls
             //refresh
             LoadPersonInfo(_PersonID);
         }
+        public void DesableEditPersonInfo()
+        {
+            llEditPersonInfo.Visible = false;
+        }
     }
 }
 

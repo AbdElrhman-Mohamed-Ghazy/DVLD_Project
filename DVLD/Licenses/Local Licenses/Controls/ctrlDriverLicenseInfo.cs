@@ -15,7 +15,7 @@ namespace DVLD.Licenses.Local_Licenses.Controls
     public partial class ctrlDriverLicenseInfo : UserControl
     {
 
-        private int _LicenseID;
+        private int _LicenseID=-1;
         private clsLicense _License;
 
         public ctrlDriverLicenseInfo()
@@ -62,7 +62,7 @@ namespace DVLD.Licenses.Local_Licenses.Controls
 
             lblLicenseID.Text = _License.LicenseID.ToString();
             lblIsActive.Text = _License.IsActive ? "Yes" : "No";
-          //  lblIsDetained.Text = _License.IsDetained ? "Yes" : "No";
+           lblIsDetained.Text = _License.IsDetained ? "Yes" : "No";
             lblClass.Text = _License.LicenseClassIfo.ClassName;
             lblFullName.Text = _License.DriverInfo.PersonInfo.FullName;
             lblNationalNo.Text = _License.DriverInfo.PersonInfo.NationalNo;
@@ -79,6 +79,7 @@ namespace DVLD.Licenses.Local_Licenses.Controls
 
 
         }
- 
+
+        
     }
 }

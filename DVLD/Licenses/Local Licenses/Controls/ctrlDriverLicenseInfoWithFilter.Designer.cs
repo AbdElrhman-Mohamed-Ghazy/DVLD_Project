@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gbFilters = new System.Windows.Forms.GroupBox();
+            this.btnFind = new System.Windows.Forms.Button();
             this.txtLicenseID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnFind = new System.Windows.Forms.Button();
             this.ctrlDriverLicenseInfo1 = new DVLD.Licenses.Local_Licenses.Controls.ctrlDriverLicenseInfo();
             this.gbFilters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -53,6 +53,18 @@
             this.gbFilters.TabIndex = 18;
             this.gbFilters.TabStop = false;
             this.gbFilters.Text = "Filter";
+            // 
+            // btnFind
+            // 
+            this.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFind.Image = global::DVLD.Properties.Resources.License_View_32;
+            this.btnFind.Location = new System.Drawing.Point(461, 20);
+            this.btnFind.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(59, 46);
+            this.btnFind.TabIndex = 18;
+            this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // txtLicenseID
             // 
@@ -80,23 +92,11 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // btnFind
-            // 
-            this.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFind.Image = global::DVLD.Properties.Resources.License_View_32;
-            this.btnFind.Location = new System.Drawing.Point(461, 20);
-            this.btnFind.Margin = new System.Windows.Forms.Padding(4);
-            this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(59, 46);
-            this.btnFind.TabIndex = 18;
-            this.btnFind.UseVisualStyleBackColor = true;
-            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
-            // 
             // ctrlDriverLicenseInfo1
             // 
             this.ctrlDriverLicenseInfo1.Location = new System.Drawing.Point(3, 89);
             this.ctrlDriverLicenseInfo1.Name = "ctrlDriverLicenseInfo1";
-            this.ctrlDriverLicenseInfo1.Size = new System.Drawing.Size(949, 329);
+            this.ctrlDriverLicenseInfo1.Size = new System.Drawing.Size(938, 329);
             this.ctrlDriverLicenseInfo1.TabIndex = 19;
             // 
             // ctrlDriverLicenseInfoWithFilter
@@ -106,7 +106,7 @@
             this.Controls.Add(this.ctrlDriverLicenseInfo1);
             this.Controls.Add(this.gbFilters);
             this.Name = "ctrlDriverLicenseInfoWithFilter";
-            this.Size = new System.Drawing.Size(963, 427);
+            this.Size = new System.Drawing.Size(948, 427);
             this.gbFilters.ResumeLayout(false);
             this.gbFilters.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

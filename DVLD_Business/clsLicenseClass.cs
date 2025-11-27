@@ -12,6 +12,9 @@ namespace DVLD_Business
     {
         public enum enMode { AddNew = 0, Update = 1 };
         public enMode Mode = enMode.AddNew;
+        public enum enLicenceClaaType { SmallMotorcycle = 1, HeavyMotorcycleLicense = 2, Ordinarydrivinglicense = 3,Commercial = 4,
+                                                      Agricultural = 5, Smallandmediumbus = 6, Truckandheavyvehicle = 7 };
+
 
         public int LicenseClassID { set; get; }
         public string ClassName { set; get; }

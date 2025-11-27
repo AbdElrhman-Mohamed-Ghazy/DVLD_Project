@@ -47,7 +47,7 @@
             // 
             // ctrlScheduleTest1
             // 
-            this.ctrlScheduleTest1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.ctrlScheduleTest1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ctrlScheduleTest1.Location = new System.Drawing.Point(63, 1);
             this.ctrlScheduleTest1.Name = "ctrlScheduleTest1";
             this.ctrlScheduleTest1.Size = new System.Drawing.Size(603, 685);
@@ -58,7 +58,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(692, 741);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.ctrlScheduleTest1);

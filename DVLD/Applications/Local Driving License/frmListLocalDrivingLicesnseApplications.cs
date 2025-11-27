@@ -1,4 +1,5 @@
-﻿using DVLD.Licenses.Local_Licenses;
+﻿using DVLD.Licenses;
+using DVLD.Licenses.Local_Licenses;
 using DVLD.Tests;
 using DVLD_Business;
 using System;
@@ -307,6 +308,17 @@ namespace DVLD.Applications.Local_Driving_License
                 MessageBox.Show("No License Found!", "No License", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+        }
+
+        private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!clsLicense.IsThereLicences(clsLocalDrivingLicenseApplication.FindByLocalDrivingAppLicenceID((int)dgvLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value).ApplicantPersonID))
+            {
+                MessageBox.Show("This Person Doesnot Have Any Licences ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; 
+            }
+            frmShowPersonLicenseHistory frm = new frmShowPersonLicenseHistory(clsLocalDrivingLicenseApplication.FindByLocalDrivingAppLicenceID((int)dgvLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value).ApplicantPersonID);
+            frm.ShowDialog();
         }
     }
     
